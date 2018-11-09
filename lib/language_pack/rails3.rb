@@ -44,9 +44,6 @@ class LanguagePack::Rails3 < LanguagePack::Rails2
   end
 
   def config_detect
-    super
-    @assets_compile_config = @rails_runner.detect("assets.compile")
-    @x_sendfile_config     = @rails_runner.detect("action_dispatch.x_sendfile_header")
   end
 
   def best_practice_warnings

@@ -68,7 +68,6 @@ WARNING
 
   def cleanup
     super
-    return if assets_compile_enabled?
     return unless Dir.exist?(default_assets_cache)
     FileUtils.remove_dir(default_assets_cache)
   end

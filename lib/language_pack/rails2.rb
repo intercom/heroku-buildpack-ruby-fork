@@ -18,7 +18,6 @@ class LanguagePack::Rails2 < LanguagePack::Ruby
 
   def initialize(build_path, cache_path=nil)
     super(build_path, cache_path)
-    @rails_runner = LanguagePack::Helpers::RailsRunner.new
   end
 
   def name
