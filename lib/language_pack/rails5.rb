@@ -32,8 +32,6 @@ class LanguagePack::Rails5 < LanguagePack::Rails42
   end
 
   def config_detect
-    super
-    @local_storage_config = @rails_runner.detect("active_storage.service")
   end
 
   def best_practice_warnings
