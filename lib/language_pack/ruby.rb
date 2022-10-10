@@ -1,5 +1,4 @@
 require "tmpdir"
-require "etc"
 require "digest/md5"
 require "benchmark"
 require "rubygems"
@@ -635,7 +634,7 @@ BUNDLE
         bundle_without = env("BUNDLE_WITHOUT") || default_bundle_without
         bundle_bin     = "bundle"
         bundle_command = "#{bundle_bin} install --without #{bundle_without} --path vendor/bundle --binstubs #{bundler_binstubs_path}"
-        bundle_command << " -j#{Etc.nprocessors}"
+        bundle_command << " -j4"
 
         if File.exist?("#{Dir.pwd}/.bundle/config")
           warn(<<-WARNING, inline: true)
